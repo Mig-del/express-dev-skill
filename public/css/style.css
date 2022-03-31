@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #403df3;
+}
+
+.background {
+  background-color: rgb(71, 147, 209);
+}
+
+ul {
+  font-size: large;
+ 
+ 
+}
+
+li {
+color: red;
+
+}
+
+.create {
+  color: rgb(241, 86, 86);
+}
+
+h1 {
+  font-weight: bold;
+
+}
+
+.name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(87, 84, 84);
+  font-size: 45px;
+}
+
+button {
+  background-color: #555555;
+}

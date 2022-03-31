@@ -4,8 +4,17 @@ module.exports = {
     index,
     show,
     new: newSkill,
-    create
+    create,
+    delete: deleteSkill,
+    edit
+    
 } 
+
+function edit(req, res){
+    res.render('skills/edit',{
+        skill: Skill.getOne(req.params.id)
+    })
+}
 
 function create(req, res){
     console.log(req.body,  "<- req.body, contents of the form")
@@ -31,4 +40,10 @@ function show(req, res){
 
 function newSkill(req,res){
     res.render('skills/new')
+}
+
+function deleteSkill(req,res){
+    console.log(req.params.id, ' < - this id the id of the todo we are deleting');
+    Skill.deleteSkill(req.params.id)
+    res.redirect('/skills')
 }

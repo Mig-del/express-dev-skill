@@ -1,3 +1,5 @@
+const res = require("express/lib/response");
+
 const skills = [
     {id:839205, skill: 'JavaScript', done: true},
     {id:901234, skill: 'CSS', done: true},
@@ -11,7 +13,9 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteSkill,
+    editSkill
 };
 
 function getAll() {
@@ -26,4 +30,14 @@ function create(skill) {
     skill.id = Date.now() % 1000000;
     skill.done = false;
     skills.push(skill);
+}
+
+function deleteSkill(id) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
+    skills.splice(idx, 1)
+}
+
+function editSkill(id) {
+    const idc = skills.findIndex(skill => skill.id === parseInt(id));
+    skills.splice(idc,1)
 }

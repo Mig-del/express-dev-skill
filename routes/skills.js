@@ -6,7 +6,9 @@ const skillController = require('../controllers/skills');
 router.get('/', skillController.index);
 router.get('/new', skillController.new);
 router.get('/:id', skillController.show);
-router.post('/', skillController.create)
+router.post('/', skillController.create);
+router.delete('/:id', skillController.delete)
+router.get('/:id/edit', skillController.edit);
 
 // /* GET users listing. */
 // router.get('/skills', function(req, res, next) {
